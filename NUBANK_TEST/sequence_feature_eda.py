@@ -18,7 +18,15 @@ import sys
 #
 
 def number_in_sequence(a, b, c):
-    
+    if c == 0:
+        if a == b:
+            return "YES"
+        else:
+            return "NO"
+    elif((b -a) % c == 0):
+        return "YES"
+    else:
+        return "NO"
     pass
     # Write your code here
 
