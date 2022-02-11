@@ -23,12 +23,26 @@ def number_in_sequence(a, b, c):
             return "YES"
         else:
             return "NO"
-    elif((b -a) % c == 0):
+    elif((b - a) % c == 0):
         return "YES"
     else:
         return "NO"
     pass
     # Write your code here
+
+print(number_in_sequence(-56, 100, 5))
+
+"""
+s_1 = 1
+s_2 = 1 + 3 = 4 
+s_3 = 4 + 3 = 7
+
+Por lo tanto 7 pertenece a la secuencia y retorna "YES"
+
+a = s_1
+c = s_i+1, s_i-1
+b = s_i 
+
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
@@ -40,3 +54,4 @@ if __name__ == '__main__':
     fptr.write(result + '\n')
 
     fptr.close()
+"""
