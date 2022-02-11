@@ -30,12 +30,19 @@ def number_in_sequence(a, b, c):
     pass
     # Write your code here
 
-print(number_in_sequence(-56, 100, 5))
+print(number_in_sequence(1, 7, 2))
 
 """
 s_1 = 1
 s_2 = 1 + 3 = 4 
 s_3 = 4 + 3 = 7
+
+1
+1 + 2 = 3
+3 + 2 = 5
+5 + 2 = 7
+
+
 
 Por lo tanto 7 pertenece a la secuencia y retorna "YES"
 
