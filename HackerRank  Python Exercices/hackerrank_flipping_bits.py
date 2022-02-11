@@ -12,8 +12,7 @@ import sys
 #
 
 def flippingBits(n):
-    return(int("".join(["1" if i == "0" else "0" 
-        for i in "{:032b}".format(n)]), 2))
+    return(int("".join(["1" if i == "0" else "0" for i in "{:032b}".format(n)]), 2))
     # Write your code here
 
-print(flippingBits(3))
+print(flippingBits(5))
