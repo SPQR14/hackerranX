@@ -34,5 +34,3 @@ elif artes:
     print("Estudia teatro")
 else:
     print("Consulta a un asesor vocacional")
-
-edad = 
