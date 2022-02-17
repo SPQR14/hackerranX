@@ -6,8 +6,6 @@ import random
 import re
 import sys
 
-
-
 #
 # Complete the 'closedPaths' function below.
 #
@@ -21,16 +19,12 @@ def closedPaths(number):
     while(number != 0):
         d = number % 10
         if(d == 0 or d == 4 or d == 6 or d == 9):
-            paths += 1
-        if(d == 8):
-            paths += 2
-        number /= 10
+            paths = paths + 1
+        elif(d == 8):
+            paths = paths + 2
+        number = number // 10
     return paths
 
-
-print(closedPaths(649578))
-
-"""
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
@@ -41,4 +35,3 @@ if __name__ == '__main__':
     fptr.write(str(result) + '\n')
 
     fptr.close()
-"""
