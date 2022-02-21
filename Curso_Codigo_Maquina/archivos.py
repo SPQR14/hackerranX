@@ -65,7 +65,8 @@ with open('files/TXT/datos_metro.csv', 'r', encoding='UTF-8') as archivo:
     estaciones = archivo.readlines() # Información relevante
     for estacion in estaciones:
         lista = estacion.strip().split(",")
-        pasajeros[lista[0]] = lista[1:]
+        pasajeros[lista[0]] = list(map(int, lista[1:]))
 
 print(pasajeros)
 
+print(sum(pasajeros["Zócalo"]))
