@@ -21,9 +21,11 @@ while a and count < 5:
         monto = float(input("Indica el monto que deseas para el crédito: "))
         num_pagos = int(input("Indica el número de pagos: "))
         if num_pagos < 0:
-            raise Exception("No pueden ingresarse cantidades negativas")
+            raise Exception("No pueden ingresarse cantidades negativas")  # Excepción personalizada
         elif num_pagos > 12:
-            raise Exception("No se puede exceder un año como plazo de pago")
+            raise Exception("El plazo máximo para pagar el c´predito es de 12 meses")
+        elif num_pagos > monto:
+            raise Exception("El número de pagos no puede ser mayor al monto solicitado")
         pago_mensual = monto / num_pagos
         print(f"El pago mensual será de: {round(pago_mensual, 2)}")
     except ValueError as error:
@@ -33,9 +35,11 @@ while a and count < 5:
     except Exception as error:
         print(f"Hubo un error {error.args} inténtalo nuevamente, porfavor")
     else:
+        # Este bloque se ejecuta cuando no ocurre ninguna excepción.
         a = False
         print("La solicitud se ha realizado con éxito.")
     finally:
+        # Este bloque se ejecuta siempre. Se ejecuta cuando ocurren excepciones y cuando no.
         count += 1
-
-print(f"Intentos exceidos. Total de intentos: {count}. Vuelve a intentarlo en una hora.")
+    if count >= 5:
+        print(f"Intentos exceidos. Total de intentos: {count}. Vuelve a intentarlo en una hora.")
