@@ -21,6 +21,8 @@ class Vehiculo:
         'ROJO',
         'VERDE'
     )
+    
+    
 
     def __init__(self, color):
         Vehiculo.folio += 1
