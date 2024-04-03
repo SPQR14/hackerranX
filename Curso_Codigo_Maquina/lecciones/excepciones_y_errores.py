@@ -22,8 +22,8 @@ while a and count < 5:
         num_pagos = int(input("Indica el número de pagos: "))
         if num_pagos < 0:
             raise Exception("No pueden ingresarse cantidades negativas")  # Excepción personalizada
-        elif num_pagos > 12:
-            raise Exception("El plazo máximo para pagar el c´predito es de 12 meses")
+        elif num_pagos > 18:
+            raise Exception("El plazo máximo para pagar el crédito es de 12 meses")
         elif num_pagos > monto:
             raise Exception("El número de pagos no puede ser mayor al monto solicitado")
         pago_mensual = monto / num_pagos

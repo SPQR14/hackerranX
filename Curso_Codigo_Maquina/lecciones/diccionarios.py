@@ -14,7 +14,7 @@
 
 persona = {"nombre": "Alejandra", "edad": 33, "direccion": "Reforma 333"}
 
-print(persona["edad"])
+print(persona["nombre"])
 print(persona.get("nombre"))
 
 ##########################################################
@@ -69,17 +69,15 @@ for simbolo in simbolos:
 
 texto = texto.upper()
 
-
 vocablos = texto.split()
-
 
 palabras = {}
 for v in vocablos:
     if v in palabras.keys():
-        palabras[v] = palabras[v] + 1
+        palabras[v] +=  1
     else:
         palabras[v] = 1
-
+print(palabras)
 lista = list(palabras.items())
 
 lista.sort(key=lambda x: x[1], reverse=True)

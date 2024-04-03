@@ -1,62 +1,30 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Created on Sat Feb 12 13:05:39 2022
-
-@author: sqpr14_
-"""
 
 """
-###############################################################################
-                                        Funciones.
-###############################################################################
+@author: Alberto
 """
 
-def suma_dos_numeros(a, b):
-    return a + b
+def sumar_dos_numeros(a, b):
+    return a+b
 
-def sumar(*numeros):
+def suma_numeros(*numeros):
     suma = 0
-    for numero in numeros:
-       suma += numero 
+    for num in numeros:
+        suma += num
     return suma
 
-#print(sumar(5, 8, 8, 9, 4, 5))
+print("El resultado de sumar del 1 al 20 es igual a", suma_numeros(1,2,3,4,5,6,7,8,9,10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20))
 
-# Caso de aplicación a impresión de credenciales 
+def formatear_nombre(nombre='', apellido_p='', apellido_m=''):
+    return nombre.upper() + ' ' + apellido_p.capitalize() + ' ' + apellido_m.capitalize()
 
+print("Nombre completo:", formatear_nombre(apellido_p='sandoval', nombre='alejandra'))
 
-nombre = "AlbertO IsAAC"
-paterno = "PICO"
-materno = "LARA"
+def generar_clave(nombre='', fechanac=''):
+    clave= ''
+    for token in nombre.split():
+        clave+=token[0]
+    return clave+fechanac[-2:]
 
-def formatea_nombres(nombre = "", paterno = "", materno = ""):
-    return nombre.upper() + ' ' + paterno.capitalize() + ' ' + materno.capitalize()
-
-def crea_clave_poblacional(nombre = "", fecha_nac = ""):
-    clave = ""
-    for palabra in nombre.split(" "):
-        clave += palabra[0]
-    clave += fecha_nac[-2:]
-    return clave
-    
-nombre = formatea_nombres(nombre = "lilia Alejandra", materno = "Basaldúa", paterno = "PIco")
-print(nombre)
-fecha = "1993"
-print(f"La clave es {crea_clave_poblacional(nombre, fecha)}")
-
-
-"""
-###############################################################################
-                        Paso por valor y por referencia.
-###############################################################################
-"""
-
-def doblar(referencia, valor):
-    referencia *= 2
-    valor *= 2
-
-estructura = ['a', 'b', 'c']
-primitiva  = 'abc'
-
-print("ANTES", estructura, primitiva)
+print(generar_clave('Alberto Isaac Pico Lara', '1994'))
